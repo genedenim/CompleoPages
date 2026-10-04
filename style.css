@@ -1,41 +1,103 @@
-body {
-  margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
-  background: #f8f3ea;
-  color: #1f1f1f;
-  line-height: 1.7;
+/* ========================================
+   FONT IMPORT
+   ======================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+
+
+/* ========================================
+   GLOBAL
+   ======================================== */
+
+* {
+  box-sizing: border-box;
 }
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
-  font-family: Aptos, "Segoe UI", Arial, sans-serif;
+
+  font-family:
+    Aptos,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
   background: #f8f3ea;
   color: #1f1f1f;
+
   line-height: 1.7;
 }
-/* HEADER */
+
+
+/* ========================================
+   TYPOGRAPHY
+   ======================================== */
+
+h1,
+h2,
+h3 {
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-weight: 400;
+}
+
+
+/* ========================================
+   HEADER
+   ======================================== */
 
 .site-header {
-  max-width: 1000px;
+  max-width: 1200px;
+
   margin: 0 auto;
+
   padding: 32px 24px;
+
   display: flex;
+
   justify-content: space-between;
   align-items: center;
 }
 
 .logo {
-  font-weight: bold;
-  text-decoration: none;
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size: 20px;
+
   color: #1f1f1f;
-  font-size: 18px;
+
+  text-decoration: none;
+}
+
+nav {
+  font-family:
+    Aptos,
+    "Segoe UI",
+    Arial,
+    sans-serif;
 }
 
 nav a {
-  margin-left: 24px;
-  text-decoration: none;
+  margin-left: 26px;
+
   color: #555;
+
+  font-size: 14px;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
 }
 
 nav a:hover,
@@ -43,257 +105,536 @@ nav a.active {
   color: #1f1f1f;
 }
 
-/* PAGE WIDTHS */
+
+/* ========================================
+   GENERAL PAGE WIDTHS
+   ======================================== */
 
 .home,
 .page,
 .post,
 .writing-page {
-  max-width: 860px;
+  max-width: 1200px;
+
   margin: 0 auto;
+
   padding: 64px 24px 100px;
 }
 
-/* GENERAL TEXT */
+
+/* ========================================
+   SMALL LABELS
+   ======================================== */
 
 .eyebrow,
 .date,
 .essay-category,
 .essay-date {
-  font-size: 13px;
+  font-family:
+    Aptos,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 12px;
+
   text-transform: uppercase;
-  letter-spacing: 1.2px;
-  color: #7d7d7d;
+
+  letter-spacing: 0.8px;
+
+  color: #777;
 }
 
-/* HOMEPAGE */
 
-.hero {
-  max-width: 760px;
-}
+/* ========================================
+   STANDARD / LIGHT PAGES
+   ======================================== */
 
-.hero h1 {
-  font-size: 56px;
-  line-height: 1.08;
-  letter-spacing: -1.5px;
-  font-weight: 500;
-  margin: 16px 0 24px;
-}
-
-.hero-text {
-  font-size: 20px;
-  color: #555;
-  max-width: 650px;
-}
-
-.text-link {
-  display: inline-block;
-  margin-top: 18px;
-  color: #1f1f1f;
-  text-decoration: none;
-  border-bottom: 1px solid #aaa;
-}
-
-.text-link:hover {
-  border-color: #1f1f1f;
-}
-
-.featured,
-.explore {
-  margin-top: 90px;
-}
-
-.section-heading h2,
-.explore h2 {
-  font-size: 30px;
-  font-weight: 500;
-  margin-top: 8px;
-}
-
-.home-essay {
-  border-top: 1px solid #d8d2c8;
-  padding: 30px 0;
-}
-
-.home-essay h3 {
-  font-size: 30px;
-  line-height: 1.25;
-  margin: 6px 0 10px;
-}
-
-.home-essay h3 a {
-  text-decoration: none;
-  color: #1f1f1f;
-}
-
-.topic-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 22px;
-}
-
-.topic-links a {
-  color: #1f1f1f;
-  text-decoration: none;
-  border-bottom: 1px solid #bbb;
-}
-
-/* ESSAYS PAGE */
-
-.writing-intro {
-  max-width: 720px;
-  margin-bottom: 46px;
-}
-
-.writing-intro h1 {
-  font-size: 60px;
-  line-height: 1;
-  letter-spacing: -2px;
-  font-weight: 500;
-  margin: 10px 0 22px;
-}
-
-.intro-text {
-  font-size: 20px;
-  color: #555;
-}
-
-/* FILTERS */
-
-.category-filter {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 50px;
-}
-
-.filter-button {
-  background: transparent;
-  border: 1px solid #cfc8bd;
-  border-radius: 999px;
-  padding: 8px 14px;
-  font-family: inherit;
-  font-size: 14px;
-  color: #555;
-  cursor: pointer;
-}
-
-.filter-button:hover {
-  border-color: #777;
-  color: #1f1f1f;
-}
-
-.filter-button.active {
-  background: #1f1f1f;
-  color: #f8f3ea;
-  border-color: #1f1f1f;
-}
-
-/* ESSAY LIST */
-
-.essay-list {
-  border-top: 1px solid #d8d2c8;
-}
-
-.essay-item {
-  padding: 34px 0 38px;
-  border-bottom: 1px solid #d8d2c8;
-}
-
-.essay-item h2 {
-  font-size: 32px;
-  line-height: 1.25;
-  font-weight: 500;
-  margin: 8px 0 10px;
-}
-
-.essay-item h2 a {
-  color: #1f1f1f;
-  text-decoration: none;
-}
-
-.essay-item h2 a:hover {
-  opacity: 0.65;
-}
-
-.essay-description {
-  max-width: 700px;
-  font-size: 17px;
-  color: #555;
-  margin-bottom: 12px;
-}
-
-/* INDIVIDUAL POSTS */
-
+.page,
 .post {
   max-width: 720px;
 }
 
 .post h1 {
-  font-size: 48px;
-  line-height: 1.1;
-  font-weight: 500;
+  font-size: 52px;
+
+  line-height: 1.05;
+
+  letter-spacing: -1px;
+
+  margin-bottom: 28px;
 }
 
 .post-content {
-  font-size: 20px;
+  font-size: 19px;
+
+  line-height: 1.8;
 }
 
-/* MOBILE */
+.post-content h2 {
+  font-size: 34px;
 
-@media (max-width: 700px) {
+  line-height: 1.15;
 
-  .site-header {
-    display: block;
-    padding: 24px 20px;
-  }
-
-  nav {
-    margin-top: 14px;
-  }
-
-  nav a {
-    margin-left: 0;
-    margin-right: 16px;
-  }
-
-  .home,
-  .page,
-  .post,
-  .writing-page {
-    padding: 48px 20px 80px;
-  }
-
-  .hero h1 {
-    font-size: 40px;
-  }
-
-  .writing-intro h1 {
-    font-size: 44px;
-  }
-
-  .essay-item h2,
-  .home-essay h3 {
-    font-size: 26px;
-  }
-
-  .hero-text,
-  .intro-text {
-    font-size: 18px;
-  }
+  margin-top: 60px;
 }
+
+.post-content h3 {
+  font-size: 27px;
+
+  margin-top: 42px;
+}
+
+
 /* ========================================
-   DARK ESSAYS PAGE
+   HOMEPAGE
+   ======================================== */
+
+.home-page {
+  background: #070707;
+
+  color: #f2f2ef;
+}
+
+
+/* HOME HEADER */
+
+.home-page .site-header {
+  max-width: 1200px;
+}
+
+.home-page .logo {
+  color: #f2f2ef;
+}
+
+.home-page nav a {
+  color: #888;
+}
+
+.home-page nav a:hover,
+.home-page nav a.active {
+  color: #ffffff;
+}
+
+
+/* HOME PAGE WIDTH */
+
+.magazine-home {
+  max-width: 1200px;
+
+  padding-top: 55px;
+}
+
+
+/* ========================================
+   HOME HERO
+   ======================================== */
+
+.home-hero {
+  max-width: 850px;
+
+  margin-bottom: 110px;
+}
+
+.home-hero h1 {
+  margin: 0;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size: 68px;
+
+  line-height: 0.98;
+
+  letter-spacing: -1.8px;
+
+  font-weight: 400;
+
+  color: #f4f3ef;
+}
+
+.home-hero-text {
+  max-width: 650px;
+
+  margin-top: 28px;
+
+  font-family:
+    Aptos,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 19px;
+
+  line-height: 1.55;
+
+  color: #999;
+}
+
+
+/* ========================================
+   HOME BUTTONS
+   ======================================== */
+
+.home-actions {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 16px;
+
+  margin-top: 30px;
+}
+
+.primary-button,
+.secondary-button {
+  display: inline-block;
+
+  padding: 12px 21px;
+
+  border-radius: 999px;
+
+  font-family:
+    Aptos,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.primary-button {
+  background: #8db6dd;
+
+  border: 1px solid #8db6dd;
+
+  color: #050505;
+}
+
+.primary-button:hover {
+  background: #a4c8e9;
+}
+
+.secondary-button {
+  background: transparent;
+
+  border: 1px solid #666;
+
+  color: #f1f1ef;
+}
+
+.secondary-button:hover {
+  border-color: #aaa;
+}
+
+
+/* ========================================
+   HOME SECTION HEADERS
+   ======================================== */
+
+.home-section-title {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 28px;
+}
+
+.home-section-title h2,
+.home-latest h2 {
+  margin: 0;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size: 43px;
+
+  line-height: 1;
+
+  color: #f3f3f0;
+}
+
+.home-section-title a {
+  font-family:
+    Aptos,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 12px;
+
+  text-transform: uppercase;
+
+  color: #888;
+
+  text-decoration: none;
+}
+
+.home-section-title a:hover {
+  color: #ffffff;
+}
+
+
+/* ========================================
+   HOME FEATURED CARDS
+   ======================================== */
+
+.home-card-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+.home-card {
+  min-width: 0;
+
+  background: #101010;
+
+  border: 1px solid #252525;
+
+  border-radius: 6px;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.home-card:hover {
+  transform: translateY(-3px);
+
+  border-color: #444;
+}
+
+.home-card a {
+  display: flex;
+
+  flex-direction: column;
+
+  height: 100%;
+
+  color: inherit;
+
+  text-decoration: none;
+}
+
+
+/* HOME CARD IMAGES */
+
+.home-card-image {
+  width: 100%;
+
+  aspect-ratio: 2 / 1;
+
+  overflow: hidden;
+
+  background: #deded8;
+}
+
+.home-card-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.placeholder-image {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #d8d5cc,
+      #aebfba
+    );
+
+  color: #555;
+
+  font-family:
+    Aptos,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+}
+
+
+/* HOME CARD CONTENT */
+
+.home-card-content {
+  padding: 22px;
+
+  flex-grow: 1;
+}
+
+.home-card-content .essay-category {
+  margin: 0 0 9px;
+
+  color: #82a6ca;
+
+  font-weight: 600;
+}
+
+.home-card-content h3 {
+  margin: 0 0 10px;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size: 26px;
+
+  line-height: 1.12;
+
+  letter-spacing: -0.3px;
+
+  color: #f2f2ef;
+}
+
+.home-card-content > p:not(.essay-category) {
+  margin: 0;
+
+  font-family:
+    Aptos,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.55;
+
+  color: #999;
+}
+
+
+/* ========================================
+   LATEST WRITING
+   ======================================== */
+
+.home-latest {
+  margin-top: 105px;
+}
+
+.home-latest h2 {
+  margin-bottom: 26px;
+}
+
+.latest-item {
+  display: grid;
+
+  grid-template-columns: 72px 1fr;
+
+  gap: 12px;
+
+  padding: 29px 0;
+
+  border-top: 1px solid #252525;
+
+  color: inherit;
+
+  text-decoration: none;
+
+  transition: opacity 0.2s ease;
+}
+
+.latest-item:last-child {
+  border-bottom: 1px solid #252525;
+}
+
+.latest-item:hover {
+  opacity: 0.7;
+}
+
+.latest-number {
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size: 46px;
+
+  line-height: 1;
+
+  color: #696969;
+}
+
+.latest-content h3 {
+  margin: 0 0 6px;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size: 23px;
+
+  line-height: 1.2;
+
+  color: #f1f1ee;
+}
+
+.latest-content p {
+  max-width: 800px;
+
+  margin: 0;
+
+  font-family:
+    Aptos,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.55;
+
+  color: #888;
+}
+
+
+/* ========================================
+   ESSAYS PAGE
    ======================================== */
 
 .essays-page {
   background: #080808;
+
   color: #f1f1ef;
 }
 
 
-/* HEADER */
+/* ESSAYS HEADER */
 
 .essays-page .site-header {
   max-width: 1200px;
@@ -304,7 +645,7 @@ nav a.active {
 }
 
 .essays-page nav a {
-  color: #8d8d8d;
+  color: #888;
 }
 
 .essays-page nav a:hover,
@@ -313,73 +654,126 @@ nav a.active {
 }
 
 
-/* PAGE WIDTH */
+/* ESSAYS PAGE WIDTH */
 
 .essays-page .writing-page {
   max-width: 1200px;
-  padding-top: 60px;
+
+  padding-top: 55px;
 }
 
 
-/* INTRO */
+/* ========================================
+   ESSAYS INTRO
+   ======================================== */
 
 .essays-page .writing-intro {
-  max-width: 720px;
+  max-width: 760px;
+
   margin-bottom: 46px;
 }
 
 .essays-page .writing-intro h1 {
+  margin: 10px 0 22px;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size: 60px;
+
+  line-height: 1;
+
+  letter-spacing: -1px;
+
+  font-weight: 400;
+
   color: #f5f5f2;
-  font-size: 58px;
 }
 
 .essays-page .intro-text {
+  font-family:
+    Aptos,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 19px;
+
+  line-height: 1.6;
+
   color: #999;
 }
 
 .essays-page .eyebrow {
-  color: #7fa3c5;
+  color: #82a6ca;
 }
 
 
-/* FILTER BUTTONS */
+/* ========================================
+   ESSAYS FILTERS
+   ======================================== */
 
-.essays-page .category-filter {
-  margin-bottom: 34px;
+.category-filter {
+  display: flex;
+
+  flex-wrap: wrap;
+
   gap: 10px;
+
+  margin-bottom: 35px;
 }
 
-.essays-page .filter-button {
+.filter-button {
+  padding: 9px 16px;
+
   background: transparent;
-  border: 1px solid #272727;
-  color: #858585;
 
-  padding: 10px 16px;
+  border: 1px solid #292929;
 
-  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 999px;
+
+  font-family:
+    Aptos,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
   font-size: 12px;
+
+  font-weight: 500;
+
   text-transform: uppercase;
-  letter-spacing: 0.3px;
+
+  color: #888;
+
+  cursor: pointer;
 
   transition:
-    border-color 0.2s ease,
     color 0.2s ease,
+    border-color 0.2s ease,
     background 0.2s ease;
 }
 
-.essays-page .filter-button:hover {
+.filter-button:hover {
   border-color: #555;
+
   color: #ddd;
 }
 
-.essays-page .filter-button.active {
-  background: #101010;
-  color: #ffffff;
+.filter-button.active {
+  background: #111;
+
   border-color: #8b9bab;
+
+  color: #ffffff;
 }
 
 
-/* CARD GRID */
+/* ========================================
+   ESSAY GRID
+   ======================================== */
 
 .essay-grid {
   display: grid;
@@ -393,7 +787,7 @@ nav a.active {
 }
 
 
-/* CARD */
+/* ESSAY CARD */
 
 .essay-card {
   min-width: 0;
@@ -401,6 +795,7 @@ nav a.active {
   background: #101010;
 
   border: 1px solid #262626;
+
   border-radius: 6px;
 
   overflow: hidden;
@@ -412,27 +807,28 @@ nav a.active {
 
 .essay-card:hover {
   transform: translateY(-3px);
+
   border-color: #444;
 }
 
-
-/* LINK */
-
 .essay-card-link {
   display: flex;
+
   flex-direction: column;
 
   height: 100%;
 
-  text-decoration: none;
   color: inherit;
+
+  text-decoration: none;
 }
 
 
-/* IMAGE AREA */
+/* ESSAY IMAGE */
 
 .essay-image {
   width: 100%;
+
   aspect-ratio: 2 / 1;
 
   overflow: hidden;
@@ -441,16 +837,13 @@ nav a.active {
 }
 
 .essay-image img {
+  display: block;
+
   width: 100%;
   height: 100%;
 
-  display: block;
-
   object-fit: cover;
 }
-
-
-/* TEMPORARY IMAGE PLACEHOLDER */
 
 .essay-image-placeholder {
   display: flex;
@@ -467,17 +860,23 @@ nav a.active {
 
   color: #777;
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    Aptos,
+    "Segoe UI",
+    Arial,
+    sans-serif;
 
-  font-size: 11px;
+  font-size: 10px;
+
   letter-spacing: 2px;
 }
 
 
-/* CONTENT */
+/* ESSAY CARD CONTENT */
 
 .essay-card-content {
   display: flex;
+
   flex-direction: column;
 
   flex-grow: 1;
@@ -485,53 +884,45 @@ nav a.active {
   padding: 24px 22px 22px;
 }
 
-
-/* CATEGORY */
-
 .essays-page .essay-category {
   margin: 0 0 10px;
 
   color: #82a6ca;
 
-  font-family: Arial, Helvetica, sans-serif;
-
-  font-size: 12px;
-
   font-weight: 600;
-
-  letter-spacing: 0.4px;
 }
-
-
-/* TITLE */
 
 .essay-card h2 {
   margin: 0 0 10px;
 
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size: 26px;
+
+  line-height: 1.12;
+
+  letter-spacing: -0.3px;
+
   color: #f3f3f0;
-
-  font-size: 25px;
-
-  line-height: 1.16;
-
-  font-weight: 500;
-
-  letter-spacing: -0.5px;
 }
-
-
-/* DESCRIPTION */
 
 .essay-card .essay-description {
   margin: 0 0 16px;
 
-  color: #999;
-
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    Aptos,
+    "Segoe UI",
+    Arial,
+    sans-serif;
 
   font-size: 15px;
 
   line-height: 1.55;
+
+  color: #999;
 
   display: -webkit-box;
 
@@ -542,48 +933,116 @@ nav a.active {
   overflow: hidden;
 }
 
-
-/* DATE */
-
 .essay-card .essay-date {
   margin-top: auto;
+
   margin-bottom: 0;
 
   padding-top: 8px;
 
-  color: #666;
-
-  font-family: Arial, Helvetica, sans-serif;
-
   font-size: 11px;
 
-  letter-spacing: 0.5px;
+  color: #666;
 }
 
 
-/* TABLET */
+/* ========================================
+   TABLET
+   ======================================== */
 
 @media (max-width: 950px) {
 
+  .home-card-grid,
   .essay-grid {
     grid-template-columns:
       repeat(2, minmax(0, 1fr));
   }
 
+  .home-hero h1 {
+    font-size: 58px;
+  }
+
 }
 
 
-/* MOBILE */
+/* ========================================
+   MOBILE
+   ======================================== */
 
 @media (max-width: 650px) {
 
-  .essays-page .writing-page {
-    padding-left: 20px;
-    padding-right: 20px;
+  .site-header {
+    display: block;
+
+    padding: 24px 20px;
   }
 
+  nav {
+    margin-top: 14px;
+  }
+
+  nav a {
+    margin-left: 0;
+
+    margin-right: 18px;
+  }
+
+
+  .home,
+  .page,
+  .post,
+  .writing-page {
+    padding:
+      42px
+      20px
+      80px;
+  }
+
+
+  /* HOME */
+
+  .home-hero {
+    margin-bottom: 75px;
+  }
+
+  .home-hero h1 {
+    font-size: 45px;
+
+    line-height: 1;
+  }
+
+  .home-hero-text {
+    font-size: 17px;
+  }
+
+  .home-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-section-title h2,
+  .home-latest h2 {
+    font-size: 35px;
+  }
+
+  .latest-item {
+    grid-template-columns:
+      52px
+      1fr;
+  }
+
+  .latest-number {
+    font-size: 35px;
+  }
+
+
+  /* ESSAYS */
+
   .essays-page .writing-intro h1 {
-    font-size: 44px;
+    font-size: 46px;
+  }
+
+  .essays-page .intro-text {
+    font-size: 17px;
   }
 
   .essay-grid {
@@ -594,352 +1053,15 @@ nav a.active {
     font-size: 26px;
   }
 
-}
-/* ========================================
-   MAGAZINE HOMEPAGE
-   ======================================== */
 
-.home-page {
-  background: #070707;
-  color: #f2f2ef;
-}
+  /* POSTS */
 
-
-/* HEADER */
-
-.home-page .site-header {
-  max-width: 1200px;
-}
-
-.home-page .logo {
-  color: #f2f2ef;
-}
-
-.home-page nav a {
-  color: #888;
-}
-
-.home-page nav a:hover {
-  color: #fff;
-}
-
-
-/* PAGE */
-
-.magazine-home {
-  max-width: 1200px;
-  padding-top: 50px;
-}
-
-
-/* HERO */
-
-.home-hero {
-  max-width: 760px;
-  margin-bottom: 100px;
-}
-
-.home-hero h1 {
-  margin: 0;
-
-  font-size: 64px;
-  line-height: 0.98;
-
-  letter-spacing: -2px;
-  font-weight: 500;
-
-  color: #f3f3f0;
-}
-
-.home-hero-text {
-  margin-top: 28px;
-
-  max-width: 650px;
-
-  font-family: Arial, Helvetica, sans-serif;
-
-  font-size: 18px;
-  line-height: 1.6;
-
-  color: #999;
-}
-
-
-/* HERO BUTTONS */
-
-.home-actions {
-  display: flex;
-  flex-wrap: wrap;
-
-  gap: 16px;
-
-  margin-top: 28px;
-}
-
-.primary-button,
-.secondary-button {
-  display: inline-block;
-
-  padding: 12px 20px;
-
-  border-radius: 999px;
-
-  text-decoration: none;
-
-  font-family: Arial, Helvetica, sans-serif;
-
-  font-size: 12px;
-  font-weight: 600;
-
-  text-transform: uppercase;
-}
-
-.primary-button {
-  background: #8db6dd;
-  color: #050505;
-}
-
-.secondary-button {
-  border: 1px solid #666;
-  color: #f1f1f1;
-}
-
-.secondary-button:hover {
-  border-color: #aaa;
-}
-
-
-/* SECTION TITLE */
-
-.home-section-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  margin-bottom: 28px;
-}
-
-.home-section-title h2,
-.home-latest h2 {
-  margin: 0;
-
-  font-size: 42px;
-  font-weight: 500;
-
-  color: #f3f3f0;
-}
-
-.home-section-title a {
-  text-decoration: none;
-
-  font-family: Arial, Helvetica, sans-serif;
-
-  font-size: 12px;
-
-  text-transform: uppercase;
-
-  color: #888;
-}
-
-
-/* FEATURED CARDS */
-
-.home-card-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(3, minmax(0, 1fr));
-
-  gap: 24px;
-}
-
-.home-card {
-  background: #101010;
-
-  border: 1px solid #252525;
-
-  border-radius: 6px;
-
-  overflow: hidden;
-}
-
-.home-card a {
-  display: block;
-
-  height: 100%;
-
-  text-decoration: none;
-
-  color: inherit;
-}
-
-.home-card-image {
-  width: 100%;
-
-  aspect-ratio: 2 / 1;
-
-  overflow: hidden;
-}
-
-.home-card-image img {
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-}
-
-.placeholder-image {
-  display: flex;
-
-  justify-content: center;
-  align-items: center;
-
-  background:
-    linear-gradient(
-      135deg,
-      #d8d5cc,
-      #b8c6c0
-    );
-
-  color: #555;
-
-  font-family: Arial, Helvetica, sans-serif;
-
-  font-size: 10px;
-
-  letter-spacing: 2px;
-}
-
-.home-card-content {
-  padding: 22px;
-}
-
-.home-card-content h3 {
-  margin: 8px 0 10px;
-
-  font-size: 25px;
-  line-height: 1.15;
-
-  font-weight: 500;
-
-  color: #f1f1ee;
-}
-
-.home-card-content p {
-  margin-bottom: 0;
-
-  font-family: Arial, Helvetica, sans-serif;
-
-  font-size: 15px;
-  line-height: 1.55;
-
-  color: #999;
-}
-
-
-/* LATEST */
-
-.home-latest {
-  margin-top: 100px;
-}
-
-.home-latest h2 {
-  margin-bottom: 24px;
-}
-
-.latest-item {
-  display: grid;
-
-  grid-template-columns:
-    70px 1fr;
-
-  gap: 10px;
-
-  padding: 28px 0;
-
-  border-top: 1px solid #252525;
-
-  text-decoration: none;
-
-  color: inherit;
-}
-
-.latest-item:last-child {
-  border-bottom: 1px solid #252525;
-}
-
-.latest-number {
-  font-size: 44px;
-
-  color: #777;
-
-  line-height: 1;
-}
-
-.latest-content h3 {
-  margin: 0 0 8px;
-
-  font-size: 22px;
-
-  font-weight: 500;
-
-  color: #f1f1ee;
-}
-
-.latest-content p {
-  margin: 0;
-
-  max-width: 760px;
-
-  font-family: Arial, Helvetica, sans-serif;
-
-  color: #888;
-
-  font-size: 15px;
-}
-
-
-/* TABLET */
-
-@media (max-width: 950px) {
-
-  .home-card-grid {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
+  .post h1 {
+    font-size: 40px;
   }
 
-}
-
-
-/* MOBILE */
-
-@media (max-width: 650px) {
-
-  .magazine-home {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .home-hero h1 {
-    font-size: 44px;
-  }
-
-  .home-card-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .home-section-title h2,
-  .home-latest h2 {
-    font-size: 34px;
-  }
-
-  .latest-item {
-    grid-template-columns:
-      50px 1fr;
-  }
-
-  .latest-number {
-    font-size: 34px;
+  .post-content {
+    font-size: 18px;
   }
 
 }
