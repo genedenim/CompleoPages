@@ -275,3 +275,315 @@ nav a.active {
     font-size: 18px;
   }
 }
+/* ========================================
+   DARK ESSAYS PAGE
+   ======================================== */
+
+.essays-page {
+  background: #080808;
+  color: #f1f1ef;
+}
+
+
+/* HEADER */
+
+.essays-page .site-header {
+  max-width: 1200px;
+}
+
+.essays-page .logo {
+  color: #f1f1ef;
+}
+
+.essays-page nav a {
+  color: #8d8d8d;
+}
+
+.essays-page nav a:hover,
+.essays-page nav a.active {
+  color: #ffffff;
+}
+
+
+/* PAGE WIDTH */
+
+.essays-page .writing-page {
+  max-width: 1200px;
+  padding-top: 60px;
+}
+
+
+/* INTRO */
+
+.essays-page .writing-intro {
+  max-width: 720px;
+  margin-bottom: 46px;
+}
+
+.essays-page .writing-intro h1 {
+  color: #f5f5f2;
+  font-size: 58px;
+}
+
+.essays-page .intro-text {
+  color: #999;
+}
+
+.essays-page .eyebrow {
+  color: #7fa3c5;
+}
+
+
+/* FILTER BUTTONS */
+
+.essays-page .category-filter {
+  margin-bottom: 34px;
+  gap: 10px;
+}
+
+.essays-page .filter-button {
+  background: transparent;
+  border: 1px solid #272727;
+  color: #858585;
+
+  padding: 10px 16px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.essays-page .filter-button:hover {
+  border-color: #555;
+  color: #ddd;
+}
+
+.essays-page .filter-button.active {
+  background: #101010;
+  color: #ffffff;
+  border-color: #8b9bab;
+}
+
+
+/* CARD GRID */
+
+.essay-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 26px 24px;
+
+  align-items: stretch;
+}
+
+
+/* CARD */
+
+.essay-card {
+  min-width: 0;
+
+  background: #101010;
+
+  border: 1px solid #262626;
+  border-radius: 6px;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.essay-card:hover {
+  transform: translateY(-3px);
+  border-color: #444;
+}
+
+
+/* LINK */
+
+.essay-card-link {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* IMAGE AREA */
+
+.essay-image {
+  width: 100%;
+  aspect-ratio: 2 / 1;
+
+  overflow: hidden;
+
+  background: #ececea;
+}
+
+.essay-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+/* TEMPORARY IMAGE PLACEHOLDER */
+
+.essay-image-placeholder {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eeeeeb,
+      #d9d9d4
+    );
+
+  color: #777;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+
+/* CONTENT */
+
+.essay-card-content {
+  display: flex;
+  flex-direction: column;
+
+  flex-grow: 1;
+
+  padding: 24px 22px 22px;
+}
+
+
+/* CATEGORY */
+
+.essays-page .essay-category {
+  margin: 0 0 10px;
+
+  color: #82a6ca;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.4px;
+}
+
+
+/* TITLE */
+
+.essay-card h2 {
+  margin: 0 0 10px;
+
+  color: #f3f3f0;
+
+  font-size: 25px;
+
+  line-height: 1.16;
+
+  font-weight: 500;
+
+  letter-spacing: -0.5px;
+}
+
+
+/* DESCRIPTION */
+
+.essay-card .essay-description {
+  margin: 0 0 16px;
+
+  color: #999;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.55;
+
+  display: -webkit-box;
+
+  -webkit-line-clamp: 3;
+
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+}
+
+
+/* DATE */
+
+.essay-card .essay-date {
+  margin-top: auto;
+  margin-bottom: 0;
+
+  padding-top: 8px;
+
+  color: #666;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 11px;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* TABLET */
+
+@media (max-width: 950px) {
+
+  .essay-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+  .essays-page .writing-page {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .essays-page .writing-intro h1 {
+    font-size: 44px;
+  }
+
+  .essay-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .essay-card h2 {
+    font-size: 26px;
+  }
+
+}
