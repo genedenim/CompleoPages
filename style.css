@@ -2,7 +2,7 @@
    FONT IMPORT
    ======================================== */
 
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Libre+Baskerville:wght@400;700&display=swap");
 
 
 /* ========================================
@@ -69,17 +69,22 @@ h3 {
 
 .logo {
   font-family:
-    "DM Serif Display",
+    "Libre Baskerville",
     Georgia,
+    "Times New Roman",
     serif;
 
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 700;
 
   color: #1f1f1f;
 
   text-decoration: none;
 }
-
+.home-page .logo,
+.essays-page .logo {
+  color: #f2f2ef;
+}
 nav {
   font-family:
     Aptos,
