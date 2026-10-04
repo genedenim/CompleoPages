@@ -587,3 +587,351 @@ nav a.active {
   }
 
 }
+/* ========================================
+   MAGAZINE HOMEPAGE
+   ======================================== */
+
+.home-page {
+  background: #070707;
+  color: #f2f2ef;
+}
+
+
+/* HEADER */
+
+.home-page .site-header {
+  max-width: 1200px;
+}
+
+.home-page .logo {
+  color: #f2f2ef;
+}
+
+.home-page nav a {
+  color: #888;
+}
+
+.home-page nav a:hover {
+  color: #fff;
+}
+
+
+/* PAGE */
+
+.magazine-home {
+  max-width: 1200px;
+  padding-top: 50px;
+}
+
+
+/* HERO */
+
+.home-hero {
+  max-width: 760px;
+  margin-bottom: 100px;
+}
+
+.home-hero h1 {
+  margin: 0;
+
+  font-size: 64px;
+  line-height: 0.98;
+
+  letter-spacing: -2px;
+  font-weight: 500;
+
+  color: #f3f3f0;
+}
+
+.home-hero-text {
+  margin-top: 28px;
+
+  max-width: 650px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 18px;
+  line-height: 1.6;
+
+  color: #999;
+}
+
+
+/* HERO BUTTONS */
+
+.home-actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 16px;
+
+  margin-top: 28px;
+}
+
+.primary-button,
+.secondary-button {
+  display: inline-block;
+
+  padding: 12px 20px;
+
+  border-radius: 999px;
+
+  text-decoration: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+}
+
+.primary-button {
+  background: #8db6dd;
+  color: #050505;
+}
+
+.secondary-button {
+  border: 1px solid #666;
+  color: #f1f1f1;
+}
+
+.secondary-button:hover {
+  border-color: #aaa;
+}
+
+
+/* SECTION TITLE */
+
+.home-section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 28px;
+}
+
+.home-section-title h2,
+.home-latest h2 {
+  margin: 0;
+
+  font-size: 42px;
+  font-weight: 500;
+
+  color: #f3f3f0;
+}
+
+.home-section-title a {
+  text-decoration: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 12px;
+
+  text-transform: uppercase;
+
+  color: #888;
+}
+
+
+/* FEATURED CARDS */
+
+.home-card-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+.home-card {
+  background: #101010;
+
+  border: 1px solid #252525;
+
+  border-radius: 6px;
+
+  overflow: hidden;
+}
+
+.home-card a {
+  display: block;
+
+  height: 100%;
+
+  text-decoration: none;
+
+  color: inherit;
+}
+
+.home-card-image {
+  width: 100%;
+
+  aspect-ratio: 2 / 1;
+
+  overflow: hidden;
+}
+
+.home-card-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.placeholder-image {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #d8d5cc,
+      #b8c6c0
+    );
+
+  color: #555;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+}
+
+.home-card-content {
+  padding: 22px;
+}
+
+.home-card-content h3 {
+  margin: 8px 0 10px;
+
+  font-size: 25px;
+  line-height: 1.15;
+
+  font-weight: 500;
+
+  color: #f1f1ee;
+}
+
+.home-card-content p {
+  margin-bottom: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 15px;
+  line-height: 1.55;
+
+  color: #999;
+}
+
+
+/* LATEST */
+
+.home-latest {
+  margin-top: 100px;
+}
+
+.home-latest h2 {
+  margin-bottom: 24px;
+}
+
+.latest-item {
+  display: grid;
+
+  grid-template-columns:
+    70px 1fr;
+
+  gap: 10px;
+
+  padding: 28px 0;
+
+  border-top: 1px solid #252525;
+
+  text-decoration: none;
+
+  color: inherit;
+}
+
+.latest-item:last-child {
+  border-bottom: 1px solid #252525;
+}
+
+.latest-number {
+  font-size: 44px;
+
+  color: #777;
+
+  line-height: 1;
+}
+
+.latest-content h3 {
+  margin: 0 0 8px;
+
+  font-size: 22px;
+
+  font-weight: 500;
+
+  color: #f1f1ee;
+}
+
+.latest-content p {
+  margin: 0;
+
+  max-width: 760px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  color: #888;
+
+  font-size: 15px;
+}
+
+
+/* TABLET */
+
+@media (max-width: 950px) {
+
+  .home-card-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+  .magazine-home {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .home-hero h1 {
+    font-size: 44px;
+  }
+
+  .home-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-section-title h2,
+  .home-latest h2 {
+    font-size: 34px;
+  }
+
+  .latest-item {
+    grid-template-columns:
+      50px 1fr;
+  }
+
+  .latest-number {
+    font-size: 34px;
+  }
+
+}
