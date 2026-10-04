@@ -5,7 +5,15 @@ body {
   color: #1f1f1f;
   line-height: 1.7;
 }
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 
+body {
+  margin: 0;
+  font-family: Aptos, "Segoe UI", Arial, sans-serif;
+  background: #f8f3ea;
+  color: #1f1f1f;
+  line-height: 1.7;
+}
 /* HEADER */
 
 .site-header {
