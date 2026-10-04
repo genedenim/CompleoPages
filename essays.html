@@ -5,17 +5,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>The Observant Learner</title>
+  <title>Essays | The Observant Learner</title>
 
   <link rel="stylesheet" href="style.css" />
 </head>
 
-
-<body class="home-page">
-
-  <!-- =========================
-       HEADER
-       ========================= -->
+<body class="essays-page">
 
   <header class="site-header">
 
@@ -24,265 +19,187 @@
     </a>
 
     <nav>
-      <a href="essays.html">Essays</a>
+      <a href="essays.html" class="active">Essays</a>
       <a href="about.html">About</a>
     </nav>
 
   </header>
 
+  <main class="writing-page">
 
-  <!-- =========================
-       MAIN CONTENT
-       ========================= -->
+    <section class="writing-intro">
 
-  <main class="home magazine-home">
-
-
-    <!-- HERO -->
-
-    <section class="home-hero">
-
-      <h1>
-        Ideas about work,<br>
-        mind, society,<br>
-        technology, and more.
-      </h1>
-
-      <p class="home-hero-text">
-        Essays and observations about the systems that shape
-        how we live, learn, work, and think.
+      <p class="eyebrow">
+        WRITING
       </p>
 
-      <div class="home-actions">
+      <h1>
+        Essays
+      </h1>
 
-        <a href="essays.html" class="primary-button">
-          Browse Essays
-        </a>
-
-        <a href="about.html" class="secondary-button">
-          About the Project
-        </a>
-
-      </div>
+      <p class="intro-text">
+        Longer reflections on society, learning, work, technology,
+        money, identity, and the systems shaping how we live.
+      </p>
 
     </section>
 
+    <section class="category-filter">
 
-    <!-- FEATURED -->
+      <button class="filter-button active" data-category="all">
+        All
+      </button>
 
-    <section class="home-featured">
+      <button class="filter-button" data-category="society">
+        Society
+      </button>
 
-      <div class="home-section-title">
+      <button class="filter-button" data-category="philosophy">
+        Philosophy
+      </button>
 
-        <h2>
-          Featured
-        </h2>
+      <button class="filter-button" data-category="work">
+        Work
+      </button>
 
-        <a href="essays.html">
-          All Essays →
+      <button class="filter-button" data-category="money">
+        Money
+      </button>
+
+      <button class="filter-button" data-category="technology">
+        Technology
+      </button>
+
+      <button class="filter-button" data-category="life">
+        Life
+      </button>
+
+    </section>
+
+    <section class="essay-grid">
+
+      <article class="essay-card" data-category="life">
+
+        <a
+          href="posts/time-enough-for-love.html"
+          class="essay-card-link"
+        >
+
+          <div class="essay-image essay-image-placeholder">
+            <span>
+              THE OBSERVANT LEARNER
+            </span>
+          </div>
+
+          <div class="essay-card-content">
+
+            <p class="essay-category">
+              LIFE
+            </p>
+
+            <h2>
+              Time Enough for Love
+            </h2>
+
+            <p class="essay-description">
+              A short reflection on attention, time,
+              and the things we keep postponing.
+            </p>
+
+            <p class="essay-date">
+              June 2, 2026
+            </p>
+
+          </div>
+
         </a>
 
-      </div>
+      </article>
 
+      <article class="essay-card" data-category="philosophy">
 
-      <div class="home-card-grid">
+        <a
+          href="posts/progress-with-standards.html"
+          class="essay-card-link"
+        >
 
+          <div class="essay-image">
 
-        <!-- FEATURED CARD 1 -->
+            <img
+              src="images/progress-with-standards-thumbnail.png"
+              alt="Illustration comparing a perfectionist building a precise ladder with an action taker climbing a rough improvised ladder"
+            />
 
-        <article class="home-card">
+          </div>
 
-          <a href="posts/time-enough-for-love.html">
+          <div class="essay-card-content">
 
-            <div class="home-card-image placeholder-image">
-              <span>THE OBSERVANT LEARNER</span>
-            </div>
+            <p class="essay-category">
+              PHILOSOPHY
+            </p>
 
-            <div class="home-card-content">
+            <h2>
+              Progress with Standards
+            </h2>
 
-              <p class="essay-category">
-                LIFE
-              </p>
+            <p class="essay-description">
+              A reflection on action, quality, and why moving forward
+              should not require abandoning standards.
+            </p>
 
-              <h3>
-                Time Enough for Love
-              </h3>
+            <p class="essay-date">
+              October 2026
+            </p>
 
-              <p>
-                A reflection on attention, time,
-                and the things we keep postponing.
-              </p>
+          </div>
 
-            </div>
+        </a>
 
-          </a>
-
-        </article>
-
-
-        <!-- FEATURED CARD 2 -->
-
-        <article class="home-card">
-
-          <a href="essays.html">
-
-            <div class="home-card-image placeholder-image">
-              <span>PHILOSOPHY</span>
-            </div>
-
-            <div class="home-card-content">
-
-              <p class="essay-category">
-                PHILOSOPHY
-              </p>
-
-              <h3>
-                Progress with Standards
-              </h3>
-
-              <p>
-                What happens when taking action matters,
-                but the quality of the work still matters too?
-              </p>
-
-            </div>
-
-          </a>
-
-        </article>
-
-
-        <!-- FEATURED CARD 3 -->
-
-        <article class="home-card">
-
-          <a href="essays.html">
-
-            <div class="home-card-image placeholder-image">
-              <span>OBSERVATIONS</span>
-            </div>
-
-            <div class="home-card-content">
-
-              <p class="essay-category">
-                LIFE
-              </p>
-
-              <h3>
-                There Are No Rules to Life
-              </h3>
-
-              <p>
-                Thoughts about structure, convention,
-                freedom, expectations, and choosing your own path.
-              </p>
-
-            </div>
-
-          </a>
-
-        </article>
-
-
-      </div>
+      </article>
 
     </section>
-
-
-    <!-- LATEST WRITING -->
-
-    <section class="home-latest">
-
-      <h2>
-        Latest Writing
-      </h2>
-
-
-      <!-- ITEM 1 -->
-
-      <a
-        href="posts/time-enough-for-love.html"
-        class="latest-item"
-      >
-
-        <span class="latest-number">
-          01
-        </span>
-
-        <div class="latest-content">
-
-          <h3>
-            Time Enough for Love
-          </h3>
-
-          <p>
-            A short reflection on attention,
-            time, and the things we keep postponing.
-          </p>
-
-        </div>
-
-      </a>
-
-
-      <!-- ITEM 2 -->
-
-      <a
-        href="essays.html"
-        class="latest-item"
-      >
-
-        <span class="latest-number">
-          02
-        </span>
-
-        <div class="latest-content">
-
-          <h3>
-            Progress with Standards
-          </h3>
-
-          <p>
-            Progress matters, but what happens when
-            speed begins replacing craftsmanship?
-          </p>
-
-        </div>
-
-      </a>
-
-
-      <!-- ITEM 3 -->
-
-      <a
-        href="essays.html"
-        class="latest-item"
-      >
-
-        <span class="latest-number">
-          03
-        </span>
-
-        <div class="latest-content">
-
-          <h3>
-            Browse All Essays
-          </h3>
-
-          <p>
-            Explore writing on society, philosophy,
-            work, technology, money, and life.
-          </p>
-
-        </div>
-
-      </a>
-
-
-    </section>
-
 
   </main>
+
+  <script>
+
+    const buttons =
+      document.querySelectorAll(".filter-button");
+
+    const essays =
+      document.querySelectorAll(".essay-card");
+
+    buttons.forEach(button => {
+
+      button.addEventListener("click", () => {
+
+        buttons.forEach(btn => {
+          btn.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+        const category =
+          button.dataset.category;
+
+        essays.forEach(essay => {
+
+          if (
+            category === "all" ||
+            essay.dataset.category === category
+          ) {
+            essay.style.display = "";
+          } else {
+            essay.style.display = "none";
+          }
+
+        });
+
+      });
+
+    });
+
+  </script>
 
 </body>
 
