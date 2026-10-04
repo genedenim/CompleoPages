@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Essays | The Observant Learner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="logo">The Observant Learner</a>
+
+    <nav>
+      <a href="essays.html" class="active">Essays</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main class="writing-page">
+
+    <section class="writing-intro">
+      <p class="eyebrow">WRITING</p>
+
+      <h1>Essays</h1>
+
+      <p class="intro-text">
+        Longer reflections on society, learning, work, technology,
+        money, identity, and the systems shaping how we live.
+      </p>
+    </section>
+
+    <section class="category-filter">
+      <button class="filter-button active" data-category="all">All</button>
+      <button class="filter-button" data-category="society">Society</button>
+      <button class="filter-button" data-category="philosophy">Philosophy</button>
+      <button class="filter-button" data-category="work">Work</button>
+      <button class="filter-button" data-category="money">Money</button>
+      <button class="filter-button" data-category="technology">Technology</button>
+      <button class="filter-button" data-category="life">Life</button>
+    </section>
+
+    <section class="essay-list">
+
+      <article class="essay-item" data-category="life">
+        <p class="essay-category">LIFE</p>
+
+        <h2>
+          <a href="posts/time-enough-for-love.html">
+            Time Enough for Love
+          </a>
+        </h2>
+
+        <p class="essay-description">
+          A short reflection on attention, time, and the things we keep postponing.
+        </p>
+
+        <p class="essay-date">June 2, 2026</p>
+      </article>
+
+    </section>
+
+  </main>
+
+  <script>
+    const buttons = document.querySelectorAll(".filter-button");
+    const essays = document.querySelectorAll(".essay-item");
+
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+
+        buttons.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        const category = button.dataset.category;
+
+        essays.forEach(essay => {
+          if (
+            category === "all" ||
+            essay.dataset.category === category
+          ) {
+            essay.style.display = "block";
+          } else {
+            essay.style.display = "none";
+          }
+        });
+
+      });
+    });
+  </script>
+
+</body>
+</html>
