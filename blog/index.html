@@ -8,92 +8,14 @@
 
   <title>Essays: The Observant Learner | compleō</title>
 
-  <link rel="stylesheet" href="../style.css">
-
-  <style>
-
-    /* =====================================
-       BLOG HOMEPAGE ADJUSTMENTS
-    ===================================== */
-
-    .blog-home-page .home-hero {
-      margin-bottom: 58px;
-    }
-
-    /* CATEGORY FILTERS BELOW INTRODUCTION */
-
-    .blog-home-page .category-filter {
-      margin-top: 36px;
-      margin-bottom: 0;
-      scroll-margin-top: 28px;
-    }
-
-    .blog-home-page .filter-button:focus-visible {
-      outline: 2px solid #8b9bab;
-      outline-offset: 3px;
-    }
-
-    /* FEATURED ARTICLE LIST */
-
-    .blog-home-page .home-featured {
-      padding-top: 20px;
-    }
-
-    .blog-home-page .home-card[hidden] {
-      display: none;
-    }
-
-    .blog-home-page .home-card-static {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
-
-    .filter-empty {
-      color: #999;
-      font-family: Aptos, "Segoe UI", Arial, sans-serif;
-      font-size: 15px;
-      padding: 24px 0;
-    }
-
-    .filter-empty[hidden] {
-      display: none;
-    }
-
-    /* LATEST WRITING */
-
-    .blog-home-page .home-latest {
-      margin-top: 85px;
-    }
-
-    /* SMALL SCREEN ADJUSTMENTS */
-
-    @media (max-width: 650px) {
-
-      .blog-home-page .home-hero {
-        margin-bottom: 45px;
-      }
-
-      .blog-home-page .category-filter {
-        gap: 8px;
-      }
-
-      .blog-home-page .filter-button {
-        font-size: 11px;
-        padding: 9px 13px;
-      }
-
-    }
-
-  </style>
+  <!-- Stylesheet in the SAME folder -->
+  <link rel="stylesheet" href="style.css">
 
 </head>
 
-<body class="home-page blog-home-page">
+<body>
 
-  <!-- =====================================
-       BLOG HEADER
-  ===================================== -->
+  <!-- BLOG HEADER -->
 
   <header class="site-header">
 
@@ -101,26 +23,15 @@
       Essays: The Observant Learner
     </a>
 
-    <nav aria-label="Blog navigation">
-
-      <a href="#browse-essays">
-        Browse Essays
-      </a>
-
-      <a href="../index.html">
-        Compleō
-      </a>
-
+    <nav class="main-nav" aria-label="Blog navigation">
+      <a href="../index.html">Compleō</a>
     </nav>
 
   </header>
 
+  <main class="blog-home">
 
-  <main class="home magazine-home">
-
-    <!-- =====================================
-         SECTION 1 — BLOG INTRODUCTION
-    ===================================== -->
+    <!-- SECTION 1: INTRODUCTION -->
 
     <section class="home-hero">
 
@@ -135,10 +46,7 @@
         that shape how we live, learn, work, and think.
       </p>
 
-
-      <!-- =====================================
-           CATEGORY FILTERS
-      ===================================== -->
+      <!-- CATEGORY FILTERS -->
 
       <div
         id="browse-essays"
@@ -215,40 +123,24 @@
     </section>
 
 
-    <!-- =====================================
-         SECTION 2 — FEATURED ESSAYS
-    ===================================== -->
+    <!-- SECTION 2: FEATURED ARTICLES -->
 
     <section class="home-featured">
 
       <div class="home-section-title">
-
         <h2>Featured</h2>
-
-        <a href="#browse-essays">
-          Browse by Category ↑
-        </a>
-
       </div>
-
 
       <div class="home-card-grid" id="essay-results">
 
-        <!-- ESSAY 1 -->
+        <!-- ARTICLE 1 -->
 
-        <article
-          class="home-card"
-          data-category="life"
-        >
+        <article class="home-card" data-category="life">
 
           <a href="../posts/time-enough-for-love.html">
 
             <div class="home-card-image placeholder-image">
-
-              <span>
-                THE OBSERVANT LEARNER
-              </span>
-
+              <span>THE OBSERVANT LEARNER</span>
             </div>
 
             <div class="home-card-content">
@@ -273,12 +165,9 @@
         </article>
 
 
-        <!-- ESSAY 2 -->
+        <!-- ARTICLE 2 -->
 
-        <article
-          class="home-card"
-          data-category="philosophy"
-        >
+        <article class="home-card" data-category="philosophy">
 
           <a href="../posts/progress-with-standards.html">
 
@@ -286,8 +175,7 @@
 
               <img
                 src="../images/Perfectionist vs. Action Taker Ladders.png"
-                alt="A comparison of a perfectionist
-                and an action taker building ladders"
+                alt="Illustration comparing a carefully built ladder with an improvised ladder"
               >
 
             </div>
@@ -315,21 +203,14 @@
         </article>
 
 
-        <!-- ESSAY 3 — PLANNED ARTICLE -->
+        <!-- ARTICLE 3: PLANNED -->
 
-        <article
-          class="home-card"
-          data-category="life"
-        >
+        <article class="home-card" data-category="life">
 
           <div class="home-card-static">
 
             <div class="home-card-image placeholder-image">
-
-              <span>
-                OBSERVATIONS
-              </span>
-
+              <span>OBSERVATIONS</span>
             </div>
 
             <div class="home-card-content">
@@ -356,7 +237,6 @@
 
       </div>
 
-
       <p
         id="filter-empty"
         class="filter-empty"
@@ -369,31 +249,22 @@
     </section>
 
 
-    <!-- =====================================
-         SECTION 3 — LATEST WRITING
-    ===================================== -->
+    <!-- SECTION 3: LATEST WRITING -->
 
     <section class="home-latest">
 
-      <h2>
-        Latest Writing
-      </h2>
-
+      <h2>Latest Writing</h2>
 
       <a
         href="../posts/time-enough-for-love.html"
         class="latest-item"
       >
 
-        <span class="latest-number">
-          01
-        </span>
+        <span class="latest-number">01</span>
 
         <div class="latest-content">
 
-          <h3>
-            Time Enough for Love
-          </h3>
+          <h3>Time Enough for Love</h3>
 
           <p>
             A short reflection on attention,
@@ -404,50 +275,20 @@
 
       </a>
 
-
       <a
         href="../posts/progress-with-standards.html"
         class="latest-item"
       >
 
-        <span class="latest-number">
-          02
-        </span>
+        <span class="latest-number">02</span>
 
         <div class="latest-content">
 
-          <h3>
-            Progress with Standards
-          </h3>
+          <h3>Progress with Standards</h3>
 
           <p>
             Progress matters, but what happens
             when speed begins replacing craftsmanship?
-          </p>
-
-        </div>
-
-      </a>
-
-
-      <a
-        href="#browse-essays"
-        class="latest-item"
-      >
-
-        <span class="latest-number">
-          03
-        </span>
-
-        <div class="latest-content">
-
-          <h3>
-            Browse Essays
-          </h3>
-
-          <p>
-            Explore writing on society, philosophy,
-            work, technology, money, and life.
           </p>
 
         </div>
@@ -459,9 +300,7 @@
   </main>
 
 
-  <!-- =====================================
-       CATEGORY FILTER INTERACTION
-  ===================================== -->
+  <!-- CATEGORY FILTER FUNCTIONALITY -->
 
   <script>
 
@@ -482,17 +321,11 @@
         const selectedCategory =
           button.dataset.category;
 
-        /* UPDATE BUTTON APPEARANCE */
-
         filterButtons.forEach(item => {
 
-          const isActive =
-            item === button;
+          const isActive = item === button;
 
-          item.classList.toggle(
-            "active",
-            isActive
-          );
+          item.classList.toggle("active", isActive);
 
           item.setAttribute(
             "aria-pressed",
@@ -500,9 +333,6 @@
           );
 
         });
-
-
-        /* FILTER ARTICLE CARDS */
 
         let visibleCount = 0;
 
@@ -520,11 +350,7 @@
 
         });
 
-
-        /* EMPTY CATEGORY MESSAGE */
-
-        emptyMessage.hidden =
-          visibleCount !== 0;
+        emptyMessage.hidden = visibleCount !== 0;
 
       });
 
