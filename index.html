@@ -60,12 +60,26 @@
       border-bottom: 1px solid #363636;
     }
 
+    /* BRAND SYMBOL + WORDMARK */
+
     .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+
       font-family: Aptos, "Segoe UI", Arial, sans-serif;
       font-size: 25px;
       font-weight: 700;
       letter-spacing: -0.8px;
+      line-height: 1.2;
       color: #ffffff;
+    }
+
+    .logo-mark {
+      display: block;
+      height: 40px;
+      width: auto;
+      flex-shrink: 0;
     }
 
     .main-nav {
@@ -411,8 +425,20 @@
 
   <header class="site-header container">
 
+    <!-- LOGO ON THE LEFT, WORDMARK ON THE RIGHT -->
+
     <a href="index.html" class="logo">
-      compleō
+
+      <img
+        src="images/compleo-logo.png"
+        alt=""
+        class="logo-mark"
+        width="595"
+        height="737"
+      >
+
+      <span>compleō</span>
+
     </a>
 
     <nav class="main-nav" aria-label="Main navigation">
@@ -424,8 +450,6 @@
       <a href="#services">
         Services
       </a>
-
-      <!-- DIRECT LINK TO BLOG HOMEPAGE -->
 
       <a href="blog/index.html">
         Essays
@@ -469,8 +493,6 @@
             Our Approach
             <span aria-hidden="true">↗</span>
           </a>
-
-          <!-- DIRECT LINK TO BLOG HOMEPAGE -->
 
           <a
             href="blog/index.html"
