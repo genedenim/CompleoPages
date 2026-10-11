@@ -1,1 +1,270 @@
 
+
+
+/* =====================================
+   THE OBSERVANT LEARNER
+   ARTICLE PAGE STYLES
+===================================== */
+
+/* Reuse the existing blog typography,
+   header, and dark background */
+
+@import url("../blog/style.css");
+
+/* ARTICLE PAGE */
+
+.article-page {
+  background: #070707;
+  color: #f2f2ef;
+}
+
+.article-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 65px 24px 110px;
+}
+
+/* ARTICLE INTRODUCTION */
+
+.article-intro {
+  max-width: 850px;
+  margin-bottom: 48px;
+}
+
+.article-category {
+  margin: 0 0 20px;
+  color: #82a6ca;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+.article-title {
+  margin: 0;
+  font-family: "DM Serif Display", Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(44px, 6vw, 72px);
+  line-height: 1;
+  letter-spacing: -1.5px;
+  color: #f4f3ef;
+}
+
+.article-subtitle {
+  max-width: 670px;
+  margin: 25px 0 0;
+  color: #aaa;
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+/* FEATURED IMAGE */
+
+.article-figure {
+  margin: 0 0 70px;
+  max-width: 1000px;
+}
+
+.article-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.article-figure figcaption {
+  margin-top: 12px;
+  color: #777;
+  font-size: 12px;
+}
+
+/* ARTICLE TEXT */
+
+.article-body {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 19px;
+  line-height: 1.85;
+  color: #c5c5c5;
+}
+
+.article-body p {
+  margin: 0 0 30px;
+}
+
+.article-body h2 {
+  margin: 60px 0 20px;
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.15;
+  color: #f2f2ef;
+}
+
+.article-body blockquote {
+  margin: 48px 0;
+  padding-left: 25px;
+  border-left: 2px solid #8b9bab;
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: 27px;
+  line-height: 1.45;
+  color: #e4e4df;
+}
+
+.draft-note {
+  padding: 25px;
+  border: 1px dashed #444;
+  border-radius: 6px;
+  background: #101010;
+  color: #aaa;
+  font-size: 16px;
+}
+
+/* =====================================
+   ABOUT THE CONTRIBUTOR
+===================================== */
+
+.contributor-section {
+  max-width: 760px;
+  margin: 100px auto 0;
+  padding-top: 34px;
+  border-top: 1px solid #333;
+}
+
+.contributor-label {
+  margin: 0 0 28px;
+  color: #999;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.contributor-layout {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.contributor-photo {
+  width: 110px;
+  height: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #202020;
+  border: 1px solid #363636;
+  border-radius: 5px;
+  color: #777;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.contributor-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contributor-name {
+  margin: 0 0 7px;
+  color: #f2f2ef;
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.contributor-role {
+  margin: 0 0 14px;
+  color: #82a6ca;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .4px;
+}
+
+.contributor-bio {
+  margin: 0;
+  color: #aaa;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* ARTICLE FOOTER */
+
+.article-footer {
+  max-width: 760px;
+  margin: 65px auto 0;
+  padding-top: 25px;
+  border-top: 1px solid #262626;
+}
+
+.article-footer a {
+  color: #bcbcbc;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.article-footer a:hover {
+  color: #fff;
+}
+
+/* =====================================
+   RESPONSIVE LAYOUT
+===================================== */
+
+@media (max-width: 650px) {
+
+  .article-shell {
+    padding: 45px 20px 80px;
+  }
+
+  .article-intro {
+    margin-bottom: 35px;
+  }
+
+  .article-title {
+    font-size: 45px;
+  }
+
+  .article-subtitle {
+    font-size: 17px;
+  }
+
+  .article-figure {
+    margin-bottom: 45px;
+  }
+
+  .article-body {
+    font-size: 17px;
+  }
+
+  .article-body h2 {
+    font-size: 30px;
+  }
+
+  .contributor-section {
+    margin-top: 70px;
+  }
+
+  .contributor-layout {
+    grid-template-columns: 85px 1fr;
+    gap: 18px;
+  }
+
+  .contributor-photo {
+    width: 85px;
+    height: 100px;
+  }
+
+  .contributor-name {
+    font-size: 22px;
+  }
+
+  .contributor-bio {
+    font-size: 14px;
+  }
+
+}
