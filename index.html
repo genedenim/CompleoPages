@@ -4,12 +4,16 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
   <title>compleō | Systems Thinking. Complete Solutions.</title>
 
   <style>
-    /* GLOBAL STYLES */
+
+    /* =====================================
+       GLOBAL STYLES
+    ===================================== */
 
     * {
       box-sizing: border-box;
@@ -36,7 +40,10 @@
       margin: 0 auto;
     }
 
-    /* HEADER AND NAVIGATION */
+
+    /* =====================================
+       HEADER AND NAVIGATION
+    ===================================== */
 
     .site-header {
       display: flex;
@@ -71,7 +78,10 @@
       color: #ffffff;
     }
 
-    /* HOMEPAGE HERO */
+
+    /* =====================================
+       SECTION 1 — HOMEPAGE HERO
+    ===================================== */
 
     .hero {
       min-height: calc(100svh - 77px);
@@ -115,6 +125,7 @@
       max-width: 570px;
     }
 
+
     /* HERO BUTTONS */
 
     .hero-actions {
@@ -155,6 +166,7 @@
       color: #bcbcbc;
     }
 
+
     /* BOTTOM OF HERO */
 
     .hero-footer {
@@ -173,7 +185,74 @@
       text-transform: uppercase;
     }
 
-    /* TEMPORARY FUTURE SECTIONS */
+
+    /* =====================================
+       SECTION 2 — OUR APPROACH
+    ===================================== */
+
+    .approach-section {
+      border-top: 1px solid #363636;
+      padding: 110px 0 130px;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding-bottom: 26px;
+      border-bottom: 1px solid #363636;
+    }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #999999;
+      margin: 0;
+    }
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+      padding-top: 65px;
+    }
+
+    .approach-title {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(36px, 4vw, 54px);
+      font-weight: 400;
+      line-height: 1.15;
+      letter-spacing: -1px;
+      margin: 0;
+      max-width: 480px;
+    }
+
+    .approach-content {
+      max-width: 520px;
+    }
+
+    .approach-lead {
+      font-size: 21px;
+      line-height: 1.5;
+      font-weight: 500;
+      color: #f0f0f0;
+      margin: 0 0 26px;
+    }
+
+    .approach-description {
+      font-size: 17px;
+      line-height: 1.85;
+      color: #aaaaaa;
+      margin: 0;
+    }
+
+
+    /* =====================================
+       SECTION 3 — SERVICES PLACEHOLDER
+    ===================================== */
 
     .future-section {
       border-top: 1px solid #303030;
@@ -193,9 +272,27 @@
       line-height: 1.7;
     }
 
-    /* MOBILE LAYOUT */
+
+    /* =====================================
+       TABLET AND MOBILE LAYOUTS
+    ===================================== */
+
+    @media (max-width: 800px) {
+
+      .approach-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding-top: 45px;
+      }
+
+      .approach-section {
+        padding: 75px 0 90px;
+      }
+
+    }
 
     @media (max-width: 600px) {
+
       .container {
         width: min(100% - 32px, 1200px);
       }
@@ -230,17 +327,42 @@
         align-items: flex-start;
         flex-direction: column;
       }
+
+      .approach-title {
+        font-size: 36px;
+      }
+
+      .approach-lead {
+        font-size: 19px;
+      }
+
+      .approach-description {
+        font-size: 16px;
+      }
+
+      .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+      }
+
     }
+
   </style>
+
 </head>
 
 <body>
 
-  <!-- WEBSITE HEADER -->
+  <!-- =====================================
+       WEBSITE HEADER
+  ===================================== -->
 
   <header class="site-header container">
 
-    <a href="index.html" class="logo">compleō</a>
+    <a href="index.html" class="logo">
+      compleō
+    </a>
 
     <nav class="main-nav" aria-label="Main navigation">
       <a href="#approach">Approach</a>
@@ -251,9 +373,11 @@
   </header>
 
 
-  <!-- HOMEPAGE INTRODUCTION -->
-
   <main>
+
+    <!-- =====================================
+         SECTION 1 — HOMEPAGE HERO
+    ===================================== -->
 
     <section class="hero container">
 
@@ -279,11 +403,13 @@
         <div class="hero-actions">
 
           <a href="#approach" class="primary-button">
-            Our Approach <span aria-hidden="true">↗</span>
+            Our Approach
+            <span aria-hidden="true">↗</span>
           </a>
 
           <a href="essays.html" class="secondary-button">
-            Explore Our Thinking <span aria-hidden="true">↗</span>
+            Explore Our Thinking
+            <span aria-hidden="true">↗</span>
           </a>
 
         </div>
@@ -298,24 +424,71 @@
     </section>
 
 
-    <!-- SECTION 2: TO BE DEVELOPED -->
+    <!-- =====================================
+         SECTION 2 — OUR APPROACH
+    ===================================== -->
 
-    <section id="approach" class="future-section">
+    <section id="approach" class="approach-section">
+
       <div class="container">
 
-        <h2>Our Approach</h2>
+        <div class="section-heading">
 
-        <p>
-          This section is currently in development.
-        </p>
+          <p class="section-label">
+            02 / Our Approach
+          </p>
+
+          <p class="section-label">
+            The Way We Think
+          </p>
+
+        </div>
+
+        <div class="approach-grid">
+
+          <div>
+
+            <h2 class="approach-title">
+              A Different Way to
+              See the Whole.
+            </h2>
+
+          </div>
+
+          <div class="approach-content">
+
+            <p class="approach-lead">
+              The most effective solutions begin
+              with understanding how things connect.
+            </p>
+
+            <p class="approach-description">
+              At Compleō, we believe meaningful
+              solutions begin with understanding
+              how things connect. By bringing
+              together different disciplines,
+              perspectives, and ways of thinking,
+              we look beyond individual problems
+              to understand the larger systems
+              shaping them.
+            </p>
+
+          </div>
+
+        </div>
 
       </div>
+
     </section>
 
 
-    <!-- SECTION 3: TO BE DEVELOPED -->
+    <!-- =====================================
+         SECTION 3 — SERVICES
+         TO BE DEVELOPED
+    ===================================== -->
 
     <section id="services" class="future-section">
+
       <div class="container">
 
         <h2>Services</h2>
@@ -325,6 +498,7 @@
         </p>
 
       </div>
+
     </section>
 
   </main>
