@@ -8,9 +8,26 @@
 
   <title>Essays: The Observant Learner | compleō</title>
 
-  <!-- Stylesheet in the SAME folder -->
   <link rel="stylesheet" href="style.css">
 
+  <style>
+    .main-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 32px;
+    }
+
+    .main-nav a[aria-current="page"] {
+      color: #f2f2ef;
+    }
+
+    @media (max-width: 650px) {
+      .main-nav {
+        gap: 24px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -24,6 +41,8 @@
     </a>
 
     <nav class="main-nav" aria-label="Blog navigation">
+      <a href="index.html" aria-current="page">Essays</a>
+      <a href="about.html">About</a>
       <a href="../index.html">Compleō</a>
     </nav>
 
@@ -31,7 +50,7 @@
 
   <main class="blog-home">
 
-    <!-- SECTION 1: INTRODUCTION -->
+    <!-- INTRODUCTION -->
 
     <section class="home-hero">
 
@@ -60,70 +79,55 @@
           class="filter-button active"
           data-category="all"
           aria-pressed="true"
-        >
-          All
-        </button>
+        >All</button>
 
         <button
           type="button"
           class="filter-button"
           data-category="society"
           aria-pressed="false"
-        >
-          Society
-        </button>
+        >Society</button>
 
         <button
           type="button"
           class="filter-button"
           data-category="philosophy"
           aria-pressed="false"
-        >
-          Philosophy
-        </button>
+        >Philosophy</button>
 
         <button
           type="button"
           class="filter-button"
           data-category="work"
           aria-pressed="false"
-        >
-          Work
-        </button>
+        >Work</button>
 
         <button
           type="button"
           class="filter-button"
           data-category="money"
           aria-pressed="false"
-        >
-          Money
-        </button>
+        >Money</button>
 
         <button
           type="button"
           class="filter-button"
           data-category="technology"
           aria-pressed="false"
-        >
-          Technology
-        </button>
+        >Technology</button>
 
         <button
           type="button"
           class="filter-button"
           data-category="life"
           aria-pressed="false"
-        >
-          Life
-        </button>
+        >Life</button>
 
       </div>
 
     </section>
 
-
-    <!-- SECTION 2: FEATURED ARTICLES -->
+    <!-- FEATURED ARTICLES -->
 
     <section class="home-featured">
 
@@ -145,13 +149,9 @@
 
             <div class="home-card-content">
 
-              <p class="essay-category">
-                Life
-              </p>
+              <p class="essay-category">Life</p>
 
-              <h3>
-                Time Enough for Love
-              </h3>
+              <h3>Time Enough for Love</h3>
 
               <p>
                 A reflection on attention, time,
@@ -163,7 +163,6 @@
           </a>
 
         </article>
-
 
         <!-- ARTICLE 2 -->
 
@@ -182,13 +181,9 @@
 
             <div class="home-card-content">
 
-              <p class="essay-category">
-                Philosophy
-              </p>
+              <p class="essay-category">Philosophy</p>
 
-              <h3>
-                Progress with Standards
-              </h3>
+              <h3>Progress with Standards</h3>
 
               <p>
                 A reflection on action, quality,
@@ -202,7 +197,6 @@
 
         </article>
 
-
         <!-- ARTICLE 3: PLANNED -->
 
         <article class="home-card" data-category="life">
@@ -215,13 +209,9 @@
 
             <div class="home-card-content">
 
-              <p class="essay-category">
-                Life
-              </p>
+              <p class="essay-category">Life</p>
 
-              <h3>
-                There Are No Rules to Life
-              </h3>
+              <h3>There Are No Rules to Life</h3>
 
               <p>
                 Thoughts about structure,
@@ -248,8 +238,7 @@
 
     </section>
 
-
-    <!-- SECTION 3: LATEST WRITING -->
+    <!-- LATEST WRITING -->
 
     <section class="home-latest">
 
@@ -299,11 +288,9 @@
 
   </main>
 
-
   <!-- CATEGORY FILTER FUNCTIONALITY -->
 
   <script>
-
     const filterButtons =
       document.querySelectorAll(".filter-button");
 
@@ -313,16 +300,13 @@
     const emptyMessage =
       document.getElementById("filter-empty");
 
-
     filterButtons.forEach(button => {
 
       button.addEventListener("click", () => {
 
-        const selectedCategory =
-          button.dataset.category;
+        const selectedCategory = button.dataset.category;
 
         filterButtons.forEach(item => {
-
           const isActive = item === button;
 
           item.classList.toggle("active", isActive);
@@ -331,7 +315,6 @@
             "aria-pressed",
             String(isActive)
           );
-
         });
 
         let visibleCount = 0;
@@ -355,7 +338,6 @@
       });
 
     });
-
   </script>
 
 </body>
