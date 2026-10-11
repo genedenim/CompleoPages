@@ -1,0 +1,362 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Essays: The Observant Learner | compleō</title>
+
+  <!-- Stylesheet in the SAME folder -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <!-- BLOG HEADER -->
+
+  <header class="site-header">
+
+    <a href="index.html" class="logo">
+      Essays: The Observant Learner
+    </a>
+
+    <nav class="main-nav" aria-label="Blog navigation">
+      <a href="../index.html">Compleō</a>
+    </nav>
+
+  </header>
+
+  <main class="blog-home">
+
+    <!-- SECTION 1: INTRODUCTION -->
+
+    <section class="home-hero">
+
+      <h1>
+        Ideas about work,<br>
+        mind, society,<br>
+        technology, and more.
+      </h1>
+
+      <p class="home-hero-text">
+        Essays and observations about the systems
+        that shape how we live, learn, work, and think.
+      </p>
+
+      <!-- CATEGORY FILTERS -->
+
+      <div
+        id="browse-essays"
+        class="category-filter"
+        role="group"
+        aria-label="Filter essays by category"
+      >
+
+        <button
+          type="button"
+          class="filter-button active"
+          data-category="all"
+          aria-pressed="true"
+        >
+          All
+        </button>
+
+        <button
+          type="button"
+          class="filter-button"
+          data-category="society"
+          aria-pressed="false"
+        >
+          Society
+        </button>
+
+        <button
+          type="button"
+          class="filter-button"
+          data-category="philosophy"
+          aria-pressed="false"
+        >
+          Philosophy
+        </button>
+
+        <button
+          type="button"
+          class="filter-button"
+          data-category="work"
+          aria-pressed="false"
+        >
+          Work
+        </button>
+
+        <button
+          type="button"
+          class="filter-button"
+          data-category="money"
+          aria-pressed="false"
+        >
+          Money
+        </button>
+
+        <button
+          type="button"
+          class="filter-button"
+          data-category="technology"
+          aria-pressed="false"
+        >
+          Technology
+        </button>
+
+        <button
+          type="button"
+          class="filter-button"
+          data-category="life"
+          aria-pressed="false"
+        >
+          Life
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- SECTION 2: FEATURED ARTICLES -->
+
+    <section class="home-featured">
+
+      <div class="home-section-title">
+        <h2>Featured</h2>
+      </div>
+
+      <div class="home-card-grid" id="essay-results">
+
+        <!-- ARTICLE 1 -->
+
+        <article class="home-card" data-category="life">
+
+          <a href="../posts/time-enough-for-love.html">
+
+            <div class="home-card-image placeholder-image">
+              <span>THE OBSERVANT LEARNER</span>
+            </div>
+
+            <div class="home-card-content">
+
+              <p class="essay-category">
+                Life
+              </p>
+
+              <h3>
+                Time Enough for Love
+              </h3>
+
+              <p>
+                A reflection on attention, time,
+                and the things we keep postponing.
+              </p>
+
+            </div>
+
+          </a>
+
+        </article>
+
+
+        <!-- ARTICLE 2 -->
+
+        <article class="home-card" data-category="philosophy">
+
+          <a href="../posts/progress-with-standards.html">
+
+            <div class="home-card-image">
+
+              <img
+                src="../images/Perfectionist vs. Action Taker Ladders.png"
+                alt="Illustration comparing a carefully built ladder with an improvised ladder"
+              >
+
+            </div>
+
+            <div class="home-card-content">
+
+              <p class="essay-category">
+                Philosophy
+              </p>
+
+              <h3>
+                Progress with Standards
+              </h3>
+
+              <p>
+                A reflection on action, quality,
+                and why moving forward should not
+                require abandoning standards.
+              </p>
+
+            </div>
+
+          </a>
+
+        </article>
+
+
+        <!-- ARTICLE 3: PLANNED -->
+
+        <article class="home-card" data-category="life">
+
+          <div class="home-card-static">
+
+            <div class="home-card-image placeholder-image">
+              <span>OBSERVATIONS</span>
+            </div>
+
+            <div class="home-card-content">
+
+              <p class="essay-category">
+                Life
+              </p>
+
+              <h3>
+                There Are No Rules to Life
+              </h3>
+
+              <p>
+                Thoughts about structure,
+                convention, freedom, expectations,
+                and choosing your own path.
+              </p>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+      <p
+        id="filter-empty"
+        class="filter-empty"
+        role="status"
+        hidden
+      >
+        There are no essays in this category yet.
+      </p>
+
+    </section>
+
+
+    <!-- SECTION 3: LATEST WRITING -->
+
+    <section class="home-latest">
+
+      <h2>Latest Writing</h2>
+
+      <a
+        href="../posts/time-enough-for-love.html"
+        class="latest-item"
+      >
+
+        <span class="latest-number">01</span>
+
+        <div class="latest-content">
+
+          <h3>Time Enough for Love</h3>
+
+          <p>
+            A short reflection on attention,
+            time, and the things we keep postponing.
+          </p>
+
+        </div>
+
+      </a>
+
+      <a
+        href="../posts/progress-with-standards.html"
+        class="latest-item"
+      >
+
+        <span class="latest-number">02</span>
+
+        <div class="latest-content">
+
+          <h3>Progress with Standards</h3>
+
+          <p>
+            Progress matters, but what happens
+            when speed begins replacing craftsmanship?
+          </p>
+
+        </div>
+
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <!-- CATEGORY FILTER FUNCTIONALITY -->
+
+  <script>
+
+    const filterButtons =
+      document.querySelectorAll(".filter-button");
+
+    const essayCards =
+      document.querySelectorAll(".home-card[data-category]");
+
+    const emptyMessage =
+      document.getElementById("filter-empty");
+
+
+    filterButtons.forEach(button => {
+
+      button.addEventListener("click", () => {
+
+        const selectedCategory =
+          button.dataset.category;
+
+        filterButtons.forEach(item => {
+
+          const isActive = item === button;
+
+          item.classList.toggle("active", isActive);
+
+          item.setAttribute(
+            "aria-pressed",
+            String(isActive)
+          );
+
+        });
+
+        let visibleCount = 0;
+
+        essayCards.forEach(card => {
+
+          const matches =
+            selectedCategory === "all" ||
+            card.dataset.category === selectedCategory;
+
+          card.hidden = !matches;
+
+          if (matches) {
+            visibleCount++;
+          }
+
+        });
+
+        emptyMessage.hidden = visibleCount !== 0;
+
+      });
+
+    });
+
+  </script>
+
+</body>
+</html>
