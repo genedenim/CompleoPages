@@ -6,452 +6,105 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>compleō | Systems Thinking. Complete Solutions.</title>
+  <title>Essays: The Observant Learner | compleō</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap"
-    rel="stylesheet"
-  >
+  <link rel="stylesheet" href="../style.css">
 
   <style>
 
     /* =====================================
-       GLOBAL STYLES
+       BLOG HOMEPAGE ADJUSTMENTS
     ===================================== */
 
-    * {
-      box-sizing: border-box;
+    .blog-home-page .home-hero {
+      margin-bottom: 58px;
     }
 
-    html {
-      scroll-behavior: smooth;
+    /* CATEGORY FILTERS BELOW INTRODUCTION */
+
+    .blog-home-page .category-filter {
+      margin-top: 36px;
+      margin-bottom: 0;
+      scroll-margin-top: 28px;
     }
 
-    body {
-      margin: 0;
-      background-color: #090909;
-      color: #f5f5f3;
-      font-family: Aptos, "Segoe UI", Arial, sans-serif;
-      line-height: 1.7;
+    .blog-home-page .filter-button:focus-visible {
+      outline: 2px solid #8b9bab;
+      outline-offset: 3px;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
+    /* FEATURED ARTICLE LIST */
+
+    .blog-home-page .home-featured {
+      padding-top: 20px;
     }
 
-    .container {
-      width: min(100% - 48px, 1200px);
-      margin: 0 auto;
+    .blog-home-page .home-card[hidden] {
+      display: none;
     }
 
-
-    /* =====================================
-       HEADER AND NAVIGATION
-    ===================================== */
-
-    .site-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 22px 0;
-      border-bottom: 1px solid #363636;
-    }
-
-    /* BRAND SYMBOL + WORDMARK */
-
-    .logo {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-
-      font-family: Aptos, "Segoe UI", Arial, sans-serif;
-      font-size: 25px;
-      font-weight: 700;
-      letter-spacing: -0.8px;
-      line-height: 1.2;
-      color: #ffffff;
-    }
-
-    .logo-mark {
-      display: block;
-      height: 40px;
-      width: auto;
-      flex-shrink: 0;
-    }
-
-    .main-nav {
-      display: flex;
-      align-items: center;
-      gap: 26px;
-    }
-
-    .main-nav a {
-      font-size: 13px;
-      color: #bfbfbf;
-      transition: color 0.2s ease;
-    }
-
-    .main-nav a:hover,
-    .main-nav a:focus-visible {
-      color: #ffffff;
-    }
-
-
-    /* =====================================
-       SECTION 1 — HOMEPAGE HERO
-    ===================================== */
-
-    .hero {
-      min-height: calc(100svh - 77px);
-      background-color: #090909;
-
+    .blog-home-page .home-card-static {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      height: 100%;
     }
 
-    .hero-content {
-      max-width: 850px;
-      padding-top: clamp(65px, 11vh, 130px);
-      padding-bottom: 75px;
-    }
-
-    .eyebrow {
-      font-size: 12px;
-      font-weight: 500;
-      color: #bcbcbc;
-      text-transform: uppercase;
-      letter-spacing: 1.2px;
-      margin: 0 0 26px;
-    }
-
-    .hero h1 {
-      margin: 0 0 28px;
-      font-family: "DM Serif Display", Georgia, serif;
-      font-size: 68px;
-      line-height: 0.98;
-      letter-spacing: -1.8px;
-      font-weight: 400;
-      color: #f4f3ef;
-    }
-
-    .hero-description {
-      max-width: 650px;
-      margin: 0;
+    .filter-empty {
+      color: #999;
       font-family: Aptos, "Segoe UI", Arial, sans-serif;
-      font-size: 19px;
-      font-weight: 400;
-      line-height: 1.55;
-      color: #d1d1d1;
+      font-size: 15px;
+      padding: 24px 0;
     }
 
-
-    /* =====================================
-       HERO BUTTONS
-    ===================================== */
-
-    .hero-actions {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 22px;
-      margin-top: 28px;
+    .filter-empty[hidden] {
+      display: none;
     }
 
-    .primary-button {
-      display: inline-flex;
-      align-items: center;
-      gap: 13px;
-      padding: 15px 20px;
+    /* LATEST WRITING */
 
-      background-color: #f5f5f3;
-      color: #111111;
-      border-radius: 5px;
-
-      font-family: Aptos, "Segoe UI", Arial, sans-serif;
-      font-size: 14px;
-      font-weight: 500;
-
-      transition: background-color 0.2s ease;
+    .blog-home-page .home-latest {
+      margin-top: 85px;
     }
 
-    .primary-button:hover {
-      background-color: #d9d9d9;
-    }
-
-    .secondary-button {
-      display: inline-flex;
-      align-items: center;
-      gap: 13px;
-      padding: 12px 0;
-
-      font-family: Aptos, "Segoe UI", Arial, sans-serif;
-      font-size: 14px;
-      color: #f0f0f0;
-    }
-
-    .secondary-button:hover {
-      color: #bcbcbc;
-    }
-
-
-    /* =====================================
-       BOTTOM OF HERO
-    ===================================== */
-
-    .hero-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      padding: 20px 0;
-      border-top: 1px solid #363636;
-    }
-
-    .hero-footer span {
-      color: #898989;
-      font-size: 11px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-
-
-    /* =====================================
-       SECTION 2 — OUR APPROACH
-    ===================================== */
-
-    .approach-section {
-      background-color: #090909;
-      border-top: 1px solid #363636;
-      padding: 110px 0 130px;
-    }
-
-    .section-heading {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      padding-bottom: 26px;
-      border-bottom: 1px solid #363636;
-    }
-
-    .section-label {
-      font-size: 11px;
-      letter-spacing: 1.2px;
-      text-transform: uppercase;
-      color: #999999;
-      margin: 0;
-    }
-
-    .approach-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: start;
-      padding-top: 65px;
-    }
-
-    .approach-title {
-      font-family: "DM Serif Display", Georgia, serif;
-      font-size: 43px;
-      font-weight: 400;
-      line-height: 1;
-      letter-spacing: -1px;
-      margin: 0;
-      max-width: 480px;
-    }
-
-    .approach-content {
-      max-width: 520px;
-    }
-
-    .approach-lead {
-      font-size: 19px;
-      line-height: 1.55;
-      font-weight: 500;
-      color: #f0f0f0;
-      margin: 0 0 26px;
-    }
-
-    .approach-description {
-      font-size: 17px;
-      line-height: 1.65;
-      color: #aaaaaa;
-      margin: 0;
-    }
-
-
-    /* =====================================
-       SECTION 3 — SERVICES
-    ===================================== */
-
-    .future-section {
-      background-color: #090909;
-      border-top: 1px solid #303030;
-      padding: 90px 0;
-    }
-
-    .future-section h2 {
-      font-family: "DM Serif Display", Georgia, serif;
-      font-size: 43px;
-      line-height: 1;
-      font-weight: 400;
-      margin: 0 0 16px;
-    }
-
-    .future-section p {
-      color: #999999;
-      font-size: 16px;
-      line-height: 1.7;
-    }
-
-
-    /* =====================================
-       TABLET LAYOUT
-    ===================================== */
-
-    @media (max-width: 950px) {
-
-      .hero h1 {
-        font-size: 58px;
-      }
-
-    }
-
-    @media (max-width: 800px) {
-
-      .approach-grid {
-        grid-template-columns: 1fr;
-        gap: 35px;
-        padding-top: 45px;
-      }
-
-      .approach-section {
-        padding: 75px 0 90px;
-      }
-
-    }
-
-
-    /* =====================================
-       MOBILE LAYOUT
-    ===================================== */
+    /* MOBILE */
 
     @media (max-width: 650px) {
 
-      .container {
-        width: min(100% - 32px, 1200px);
+      .blog-home-page .home-hero {
+        margin-bottom: 45px;
       }
 
-      .site-header {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 18px;
+      .blog-home-page .category-filter {
+        gap: 8px;
       }
 
-      .main-nav {
-        gap: 22px;
-      }
-
-      .hero-content {
-        padding-top: 75px;
-      }
-
-      .hero h1 {
-        font-size: 45px;
-        line-height: 1;
-      }
-
-      .hero-description {
-        font-size: 17px;
-      }
-
-      .hero-actions {
-        gap: 16px;
-      }
-
-      .hero-footer {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .approach-title {
-        font-size: 36px;
-      }
-
-      .approach-lead {
-        font-size: 19px;
-      }
-
-      .approach-description {
-        font-size: 16px;
-      }
-
-      .section-heading {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 10px;
-      }
-
-    }
-
-    @media (max-width: 420px) {
-
-      .hero h1 {
-        font-size: clamp(34px, 10vw, 45px);
-      }
-
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-
-      html {
-        scroll-behavior: auto;
+      .blog-home-page .filter-button {
+        font-size: 11px;
+        padding: 9px 13px;
       }
 
     }
 
   </style>
+
 </head>
 
-<body>
+<body class="home-page blog-home-page">
 
   <!-- =====================================
-       WEBSITE HEADER
+       BLOG HEADER
   ===================================== -->
 
-  <header class="site-header container">
-
-    <!-- UPDATED LOGO FILE -->
+  <header class="site-header">
 
     <a href="index.html" class="logo">
-
-      <img
-        src="images/Minimalist%20Black%20Crescent%20Logo.png"
-        alt=""
-        class="logo-mark"
-      >
-
-      <span>compleō</span>
-
+      Essays: The Observant Learner
     </a>
 
-    <nav class="main-nav" aria-label="Main navigation">
+    <nav aria-label="Blog navigation">
 
-      <a href="#approach">
-        Approach
-      </a>
-
-      <a href="#services">
-        Services
-      </a>
-
-      <a href="blog/index.html">
-        Essays
+      <a href="../index.html">
+        Compleō
       </a>
 
     </nav>
@@ -459,61 +112,97 @@
   </header>
 
 
-  <main>
+  <main class="home magazine-home">
 
     <!-- =====================================
-         SECTION 1 — HOMEPAGE HERO
+         SECTION 1 — BLOG INTRODUCTION
     ===================================== -->
 
-    <section class="hero container">
+    <section class="home-hero">
 
-      <div class="hero-content">
+      <h1>
+        Ideas about work,<br>
+        mind, society,<br>
+        technology, and more.
+      </h1>
 
-        <p class="eyebrow">
-          A Multidisciplinary Perspective
-        </p>
+      <p class="home-hero-text">
+        Essays and observations about the systems
+        that shape how we live, learn, work, and think.
+      </p>
 
-        <h1>
-          Systems Thinking.<br>
-          Complete Solutions.
-        </h1>
 
-        <p class="hero-description">
-          Complex challenges rarely exist in isolation.
-          Compleō brings together ideas, disciplines, and
-          perspectives to understand the bigger picture,
-          uncover meaningful connections, and develop
-          practical solutions.
-        </p>
+      <!-- CATEGORY FILTERS -->
 
-        <div class="hero-actions">
+      <div
+        id="browse-essays"
+        class="category-filter"
+        role="group"
+        aria-label="Filter essays by category"
+      >
 
-          <a href="#approach" class="primary-button">
-            Our Approach
-            <span aria-hidden="true">↗</span>
-          </a>
+        <button
+          type="button"
+          class="filter-button active"
+          data-category="all"
+          aria-pressed="true"
+        >
+          All
+        </button>
 
-          <a
-            href="blog/index.html"
-            class="secondary-button"
-          >
-            Explore Our Thinking
-            <span aria-hidden="true">↗</span>
-          </a>
+        <button
+          type="button"
+          class="filter-button"
+          data-category="society"
+          aria-pressed="false"
+        >
+          Society
+        </button>
 
-        </div>
+        <button
+          type="button"
+          class="filter-button"
+          data-category="philosophy"
+          aria-pressed="false"
+        >
+          Philosophy
+        </button>
 
-      </div>
+        <button
+          type="button"
+          class="filter-button"
+          data-category="work"
+          aria-pressed="false"
+        >
+          Work
+        </button>
 
-      <div class="hero-footer">
+        <button
+          type="button"
+          class="filter-button"
+          data-category="money"
+          aria-pressed="false"
+        >
+          Money
+        </button>
 
-        <span>
-          Think Beyond the Parts.
-        </span>
+        <button
+          type="button"
+          class="filter-button"
+          data-category="technology"
+          aria-pressed="false"
+        >
+          Technology
+        </button>
 
-        <span>
-          01 — Introduction
-        </span>
+        <button
+          type="button"
+          class="filter-button"
+          data-category="life"
+          aria-pressed="false"
+        >
+          Life
+        </button>
 
       </div>
 
@@ -521,84 +210,296 @@
 
 
     <!-- =====================================
-         SECTION 2 — OUR APPROACH
+         SECTION 2 — FEATURED ESSAYS
     ===================================== -->
 
-    <section id="approach" class="approach-section">
+    <section class="home-featured">
 
-      <div class="container">
+      <div class="home-section-title">
 
-        <div class="section-heading">
+        <h2>Featured</h2>
 
-          <p class="section-label">
-            02 / Our Approach
-          </p>
-
-          <p class="section-label">
-            The Way We Think
-          </p>
-
-        </div>
-
-        <div class="approach-grid">
-
-          <div>
-
-            <h2 class="approach-title">
-              A Different Way to
-              See the Whole.
-            </h2>
-
-          </div>
-
-          <div class="approach-content">
-
-            <p class="approach-lead">
-              The most effective solutions begin
-              with understanding how things connect.
-            </p>
-
-            <p class="approach-description">
-              At Compleō, we believe meaningful
-              solutions begin with understanding
-              how things connect. By bringing
-              together different disciplines,
-              perspectives, and ways of thinking,
-              we look beyond individual problems
-              to understand the larger systems
-              shaping them.
-            </p>
-
-          </div>
-
-        </div>
+        <a href="#browse-essays">
+          Browse by Category ↑
+        </a>
 
       </div>
+
+
+      <div class="home-card-grid" id="essay-results">
+
+        <!-- ESSAY 1 -->
+
+        <article
+          class="home-card"
+          data-category="life"
+        >
+
+          <a href="../posts/time-enough-for-love.html">
+
+            <div class="home-card-image placeholder-image">
+
+              <span>
+                THE OBSERVANT LEARNER
+              </span>
+
+            </div>
+
+            <div class="home-card-content">
+
+              <p class="essay-category">
+                Life
+              </p>
+
+              <h3>
+                Time Enough for Love
+              </h3>
+
+              <p>
+                A reflection on attention, time,
+                and the things we keep postponing.
+              </p>
+
+            </div>
+
+          </a>
+
+        </article>
+
+
+        <!-- ESSAY 2 -->
+
+        <article
+          class="home-card"
+          data-category="philosophy"
+        >
+
+          <a href="../posts/progress-with-standards.html">
+
+            <div class="home-card-image">
+
+              <img
+                src="../images/Perfectionist vs. Action Taker Ladders.png"
+                alt="A comparison of a perfectionist
+                and an action taker building ladders"
+              >
+
+            </div>
+
+            <div class="home-card-content">
+
+              <p class="essay-category">
+                Philosophy
+              </p>
+
+              <h3>
+                Progress with Standards
+              </h3>
+
+              <p>
+                A reflection on action, quality,
+                and why moving forward should not
+                require abandoning standards.
+              </p>
+
+            </div>
+
+          </a>
+
+        </article>
+
+
+        <!-- ESSAY 3 — PLANNED ARTICLE -->
+
+        <article
+          class="home-card"
+          data-category="life"
+        >
+
+          <div class="home-card-static">
+
+            <div class="home-card-image placeholder-image">
+
+              <span>
+                OBSERVATIONS
+              </span>
+
+            </div>
+
+            <div class="home-card-content">
+
+              <p class="essay-category">
+                Life
+              </p>
+
+              <h3>
+                There Are No Rules to Life
+              </h3>
+
+              <p>
+                Thoughts about structure,
+                convention, freedom, expectations,
+                and choosing your own path.
+              </p>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+
+      <p
+        id="filter-empty"
+        class="filter-empty"
+        role="status"
+        hidden
+      >
+        There are no essays in this category yet.
+      </p>
 
     </section>
 
 
     <!-- =====================================
-         SECTION 3 — SERVICES
+         SECTION 3 — LATEST WRITING
     ===================================== -->
 
-    <section id="services" class="future-section">
+    <section class="home-latest">
 
-      <div class="container">
+      <h2>
+        Latest Writing
+      </h2>
 
-        <h2>
-          Services
-        </h2>
 
-        <p>
-          This section is currently in development.
-        </p>
+      <a
+        href="../posts/time-enough-for-love.html"
+        class="latest-item"
+      >
 
-      </div>
+        <span class="latest-number">
+          01
+        </span>
+
+        <div class="latest-content">
+
+          <h3>
+            Time Enough for Love
+          </h3>
+
+          <p>
+            A short reflection on attention,
+            time, and the things we keep postponing.
+          </p>
+
+        </div>
+
+      </a>
+
+
+      <a
+        href="../posts/progress-with-standards.html"
+        class="latest-item"
+      >
+
+        <span class="latest-number">
+          02
+        </span>
+
+        <div class="latest-content">
+
+          <h3>
+            Progress with Standards
+          </h3>
+
+          <p>
+            Progress matters, but what happens
+            when speed begins replacing craftsmanship?
+          </p>
+
+        </div>
+
+      </a>
 
     </section>
 
   </main>
+
+
+  <!-- =====================================
+       CATEGORY FILTER INTERACTION
+  ===================================== -->
+
+  <script>
+
+    const filterButtons =
+      document.querySelectorAll(".filter-button");
+
+    const essayCards =
+      document.querySelectorAll(".home-card[data-category]");
+
+    const emptyMessage =
+      document.getElementById("filter-empty");
+
+
+    filterButtons.forEach(button => {
+
+      button.addEventListener("click", () => {
+
+        const selectedCategory =
+          button.dataset.category;
+
+        /* UPDATE BUTTON APPEARANCE */
+
+        filterButtons.forEach(item => {
+
+          const isActive =
+            item === button;
+
+          item.classList.toggle(
+            "active",
+            isActive
+          );
+
+          item.setAttribute(
+            "aria-pressed",
+            String(isActive)
+          );
+
+        });
+
+
+        /* FILTER ARTICLE CARDS */
+
+        let visibleCount = 0;
+
+        essayCards.forEach(card => {
+
+          const matches =
+            selectedCategory === "all" ||
+            card.dataset.category === selectedCategory;
+
+          card.hidden = !matches;
+
+          if (matches) {
+            visibleCount++;
+          }
+
+        });
+
+
+        /* EMPTY CATEGORY MESSAGE */
+
+        emptyMessage.hidden =
+          visibleCount !== 0;
+
+      });
+
+    });
+
+  </script>
 
 </body>
 </html>
