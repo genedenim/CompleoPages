@@ -11,23 +11,59 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
+    /* BLOG TITLE TYPOGRAPHY */
+
+    .site-header .logo {
+      display: inline-flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      column-gap: 8px;
+      text-decoration: none;
+    }
+
+    .logo-serif {
+      font-family: "DM Serif Display", Georgia, serif;
+      font-size: 21px;
+      font-weight: 400;
+    }
+
+    .logo-aptos {
+      font-family: Aptos, "Segoe UI", Arial, sans-serif;
+      font-size: 19px;
+      font-weight: 400;
+      letter-spacing: -0.3px;
+    }
+
+    /* NAVIGATION */
+
     .main-nav {
       display: flex;
       align-items: center;
-      flex-wrap: wrap;
       gap: 32px;
     }
 
-    .main-nav a[aria-current="page"] {
-      color: #f2f2ef;
+    .main-nav a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 40px;
     }
 
     @media (max-width: 650px) {
       .main-nav {
+        flex-wrap: wrap;
         gap: 24px;
+      }
+
+      .site-header .logo {
+        column-gap: 7px;
+      }
+
+      .logo-aptos {
+        font-size: 17px;
       }
     }
   </style>
+
 </head>
 
 <body>
@@ -37,12 +73,11 @@
   <header class="site-header">
 
     <a href="index.html" class="logo">
-      Essays: The Observant Learner
+      <span class="logo-serif">Essays:</span>
+      <span class="logo-aptos">The Observant Learner</span>
     </a>
 
     <nav class="main-nav" aria-label="Blog navigation">
-      <a href="index.html" aria-current="page">Essays</a>
-      <a href="about.html">About</a>
       <a href="../index.html">Compleō</a>
     </nav>
 
@@ -291,6 +326,7 @@
   <!-- CATEGORY FILTER FUNCTIONALITY -->
 
   <script>
+
     const filterButtons =
       document.querySelectorAll(".filter-button");
 
@@ -307,6 +343,7 @@
         const selectedCategory = button.dataset.category;
 
         filterButtons.forEach(item => {
+
           const isActive = item === button;
 
           item.classList.toggle("active", isActive);
@@ -315,6 +352,7 @@
             "aria-pressed",
             String(isActive)
           );
+
         });
 
         let visibleCount = 0;
@@ -338,6 +376,7 @@
       });
 
     });
+
   </script>
 
 </body>
