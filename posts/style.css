@@ -1,17 +1,32 @@
 
-
-
 /* =====================================
    THE OBSERVANT LEARNER
    ARTICLE PAGE STYLES
 ===================================== */
 
-/* Reuse the existing blog typography,
-   header, and dark background */
-
 @import url("../blog/style.css");
 
-/* ARTICLE PAGE */
+/* =====================================
+   NAVIGATION SPACING
+===================================== */
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.main-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  white-space: nowrap;
+}
+
+/* =====================================
+   ARTICLE PAGE
+===================================== */
 
 .article-page {
   background: #070707;
@@ -58,7 +73,9 @@
   line-height: 1.6;
 }
 
-/* FEATURED IMAGE */
+/* =====================================
+   FEATURED IMAGE
+===================================== */
 
 .article-figure {
   margin: 0 0 70px;
@@ -78,7 +95,9 @@
   font-size: 12px;
 }
 
-/* ARTICLE TEXT */
+/* =====================================
+   ARTICLE TEXT
+===================================== */
 
 .article-body {
   max-width: 760px;
@@ -192,7 +211,9 @@
   line-height: 1.8;
 }
 
-/* ARTICLE FOOTER */
+/* =====================================
+   ARTICLE FOOTER
+===================================== */
 
 .article-footer {
   max-width: 760px;
@@ -216,6 +237,10 @@
 ===================================== */
 
 @media (max-width: 650px) {
+
+  .main-nav {
+    gap: 24px;
+  }
 
   .article-shell {
     padding: 45px 20px 80px;
@@ -266,5 +291,4 @@
   .contributor-bio {
     font-size: 14px;
   }
-
 }
